@@ -71,7 +71,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.d(TAG, "onCreated Called")
+
+        //Log Messege
+        Log.d(TAG,"OnCreate initialized")
 
         // Use Data Binding to get reference to the views
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
@@ -99,32 +101,44 @@ class MainActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        Log.d(TAG, "onStart Called")
+
+        //OnStart Log Messege
+        Log.d(TAG,"onStart executed")
     }
 
     override fun onResume() {
         super.onResume()
-        Log.d(TAG, "onResume Called")
+
+        //onResume Log Messege
+        Log.d(TAG, "onResume executed")
     }
 
     override fun onPause() {
         super.onPause()
-        Log.d(TAG, "onPause Called")
+
+        //onPause Log Messege
+        Log.d(TAG, "onPause executed")
     }
 
     override fun onStop() {
         super.onStop()
-        Log.d(TAG, "onStop Called")
+
+        //onStop Log Messege
+        Log.d(TAG, "onStop executed")
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.d(TAG, "onDestroy Called")
+
+        //onDestroy Log Messege
+        Log.d(TAG, "onDestroy executed")
     }
 
     override fun onRestart() {
         super.onRestart()
-        Log.d(TAG, "onRestart Called")
+
+        //onRestart Log Messege
+        Log.d(TAG, "onRestart executed")
     }
 
     /**
