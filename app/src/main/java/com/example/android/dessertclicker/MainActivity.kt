@@ -26,6 +26,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ShareCompat
 import androidx.databinding.DataBindingUtil
 import com.example.android.dessertclicker.databinding.ActivityMainBinding
+import timber.log.Timber
 
 // onSaveInstanceState Bundle Keys
 const val KEY_REVENUE = "revenue_key"
@@ -72,8 +73,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Log Messege
-        Log.i("MainActivity", "onCreate Called")
+        // Timber Messege
+        Timber.i("onCreate Called")
 
         // Use Data Binding to get reference to the views
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
@@ -102,43 +103,37 @@ class MainActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
 
-        // Log Messege
-        Log.i("MainActivity", "onStart Called")
+        Timber.i("onStart Called")
     }
 
     override fun onResume() {
         super.onResume()
 
-        //onResume Log Messege
-        Log.d(TAG, "onResume executed")
+        Timber.i("onResume executed")
     }
 
     override fun onPause() {
         super.onPause()
 
-        //onPause Log Messege
-        Log.d(TAG, "onPause executed")
+        Timber.i("onPause executed")
     }
 
     override fun onStop() {
         super.onStop()
 
-        //onStop Log Messege
-        Log.d(TAG, "onStop executed")
+        Timber.i("onStop executed")
     }
 
     override fun onDestroy() {
         super.onDestroy()
 
-        //onDestroy Log Messege
-        Log.d(TAG, "onDestroy executed")
+        Timber.i("onDestroy executed")
     }
 
     override fun onRestart() {
         super.onRestart()
 
-        //onRestart Log Messege
-        Log.d(TAG, "onRestart executed")
+        Timber.i("onRestart executed")
     }
 
     /**
@@ -185,7 +180,7 @@ class MainActivity : AppCompatActivity() {
      */
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-        Log.d(TAG, "onSaveInstanceState Called")
+        Timber.i("onSaveInstanceState Called")
         outState.putInt(KEY_REVENUE, revenue)
         outState.putInt(KEY_DESSERT_SOLD, dessertsSold)
     }
